@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "667945469122",
+    "firebase_url": "https://firecard-wonder.firebaseio.com",
+    "project_id": "firecard-wonder",
+    "storage_bucket": "firecard-wonder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667945469122:android:ae1413a6b87e5a33",
+        "android_client_info": {
+          "package_name": "com.example.zugate.firecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667945469122-gdko8ffnifa8hshi5eughk43iq1h23n9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zugate.firecard",
+            "certificate_hash": "116f836280120fadfcb399afd59567a09f628200"
+          }
+        },
+        {
+          "client_id": "667945469122-ii42h9uubtfkt7enh0pbrj9gli8spmj5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zugate.firecard",
+            "certificate_hash": "8fe7a941f79c8f3a5961811c6d05f2eaa948fcac"
+          }
+        },
+        {
+          "client_id": "667945469122-h1u2ovsvp72ud4qbgpto0c7utip2ef37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBslIDvIfj6ADmZtKah0ofAAsd1bKC7OzI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667945469122-h1u2ovsvp72ud4qbgpto0c7utip2ef37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
