@@ -42,6 +42,9 @@ public class PlayAgain extends Activity {
 
     @Override
     public void onBackPressed() {
+
+        Intent intent = new Intent(this, HomeScreen.class);
+        startActivity(intent);
         finish();
     }
 }

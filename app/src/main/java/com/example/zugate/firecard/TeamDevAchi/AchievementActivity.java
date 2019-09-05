@@ -1,32 +1,28 @@
 package com.example.zugate.firecard.TeamDevAchi;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.zugate.firecard.AboutUs;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.zugate.firecard.MainActivity;
 import com.example.zugate.firecard.Notification;
-import com.example.zugate.firecard.OurEventActivity;
 import com.example.zugate.firecard.Play.HomeScreen;
 import com.example.zugate.firecard.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.flaviofaria.kenburnsview.KenBurnsView;
 import com.flaviofaria.kenburnsview.RandomTransitionGenerator;
 import com.flaviofaria.kenburnsview.Transition;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -124,7 +120,7 @@ public class AchievementActivity extends AppCompatActivity {
         super.onStart();
 
 
-        FirebaseRecyclerAdapter<Blog, AchievementActivity.BlogViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Blog, AchievementActivity.BlogViewHolder>
+        FirebaseRecyclerAdapter<Blog, AchievementActivity.BlogViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Blog, BlogViewHolder>
                 (Blog.class, R.layout.cardview, AchievementActivity.BlogViewHolder.class, mDatabase) {
             @Override
             protected void populateViewHolder(BlogViewHolder viewHolder, Blog model, int position) {

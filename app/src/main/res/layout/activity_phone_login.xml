@@ -60,7 +60,7 @@
     <ImageView
         android:id="@+id/imageView2Phone"
         android:layout_width="30dp"
-        android:src="@drawable/callicon"
+        app:srcCompat="@drawable/callicon"
         android:layout_height="30dp"
         android:layout_alignTop="@+id/Phonenoedittext"
         android:layout_marginEnd="9dp"
