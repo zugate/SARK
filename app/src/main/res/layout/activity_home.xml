@@ -29,12 +29,11 @@
 
             <TextView
                 android:id="@+id/condeventtxt"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold|italic"
+                android:layout_marginTop="65dp"
+                android:textStyle="bold"
                 android:textSize="20dp"
-                android:layout_marginVertical="40dp"
                 android:textColor="#fff"
-                android:background="@color/transparent"
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Glimpse"/>

@@ -1,9 +1,10 @@
 package com.example.zugate.firecard;
-
-import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
-
+import androidx.annotation.NonNull;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,10 +12,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-import android.widget.Toolbar;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
@@ -22,7 +19,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 public class ChatMain extends AppCompatActivity {
     private static final int SIGN_IN_REQUEST_CODE = 111;
@@ -34,13 +30,13 @@ public class ChatMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_main);
-        Toolbar toolbar =  findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
 
 
 
         //find views by Ids
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         final EditText input = (EditText) findViewById(R.id.input);
         listView = (ListView) findViewById(R.id.list);
 
@@ -57,24 +53,24 @@ public class ChatMain extends AppCompatActivity {
             showAllOldMessages();
         }
 
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (input.getText().toString().trim().equals("")) {
-//                    Toast.makeText(ChatMain.this, "Please enter some texts!", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    FirebaseDatabase.getInstance()
-//                            .getReference()
-//                            .child("Chats")
-//                            .push()
-//                            .setValue(new ChatMessage(input.getText().toString(),
-//                                    FirebaseAuth.getInstance().getCurrentUser().getDisplayName(),
-//                                    FirebaseAuth.getInstance().getCurrentUser().getUid())
-//                            );
-//                    input.setText("");
-//                }
-//            }
-//        });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (input.getText().toString().trim().equals("")) {
+                    Toast.makeText(ChatMain.this, "Please enter some texts!", Toast.LENGTH_SHORT).show();
+                } else {
+                    FirebaseDatabase.getInstance()
+                            .getReference()
+                            .child("Chats")
+                            .push()
+                            .setValue(new ChatMessage(input.getText().toString(),
+                                    FirebaseAuth.getInstance().getCurrentUser().getDisplayName(),
+                                    FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            );
+                    input.setText("");
+                }
+            }
+        });
     }
 
     @Override
